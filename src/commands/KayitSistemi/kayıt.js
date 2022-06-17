@@ -63,12 +63,12 @@ run: async (client, message, args, embed, prefix) => {
 
    const tagModedata = await regstats.findOne({ guildID: message.guild.id })
     if (tagModedata && tagModedata.tagMode === true) {
-    if(!uye.roles.cache.has("855159733048311818") && !uye.roles.cache.has(ayar.vipRole) && !uye.roles.cache.has(ayar.boosterRolu)) return message.lineReply(embed.setDescription(`${uye.toString()} isimli üyenin kullanıcı adında tagımız (\`†, Shéw, #1983\`) olmadığı, <@&${ayar.boosterRolu}>, <@&${ayar.vipRole}> Rolü olmadığı için isim değiştirmekden başka kayıt işlemi yapamazsınız.`));
+    if(!uye.roles.cache.has("855159733048311818") && !uye.roles.cache.has(ayar.vipRole) && !uye.roles.cache.has(ayar.boosterRolu)) return message.lineReply(embed.setDescription(`${uye.toString()} isimli üyenin kullanıcı adında tagımız (\`✭, Shéw, #1983\`) olmadığı, <@&${ayar.boosterRolu}>, <@&${ayar.vipRole}> Rolü olmadığı için isim değiştirmekden başka kayıt işlemi yapamazsınız.`));
     }
 
     if(!yaş) 
-    { setName =`† ${isim}`;
-    } else { setName = `† ${isim} ' ${yaş}`;
+    { setName =`✭ ${isim}`;
+    } else { setName = `✭ ${isim} | ${yaş}`;
   }
 
     uye.setNickname(`${setName}`).catch(err => message.lineReply(`İsim çok uzun.`))
