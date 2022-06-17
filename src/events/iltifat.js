@@ -48,9 +48,9 @@ moment.locale("tr");
       "Ben seninle birlikte yaşayabilmek için ikinci kere geldim hayata.",
       "Senin attığın adımlarda seni korumak için geçtiğin yol olmak isterdim. Seni emniyete alan ve sonsuz bir yolculuğa çıkaran bir yol.",
       "Aklıma sevmek geldiğinde, gözlerimin önüne sen geliyorsun. Günün her saati canım sevmek istiyor ve seni düşünüyor kalbim",
-      "Ozi senden mesaj bekliyor ;)",
-      "Ozi selam söyledi sana.",
-      "Ozi yanına gelmek için uçak bileti almış benden duymuş olma.",
+      "Aroura senden mesaj bekliyor ;)",
+      "Aroura selam söyledi sana.",
+      "Aroura yanına gelmek için uçak bileti almış benden duymuş olma.",
       "Tak jileti dudağına şah damarımdan öp beni!"
     ];
     

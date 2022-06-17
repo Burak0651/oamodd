@@ -10,10 +10,10 @@ module.exports = {
  run: async (client, message, args, durum, kanal) => {
   
 let botcomamnds = "855159731176865812"
-let tag = "†" 
-  let ekiprol = ["855159733048311818","","","","","","","",""]
-  let ekipetikettag = ["1983","","","","","","",""]
-  let ekipisimtag = ["Shéw","","","","","","","",""]
+let tag = "✬" 
+  let ekiprol = ["982541040181465097","","","","","","","",""]
+  let ekipetikettag = ["","","","","","","",""]
+  let ekipisimtag = ["✬","","","","","","","",""]
 
   let rdagıt = new disbut.MessageButton().setStyle('green').setLabel(`Rol Dağıt`).setID('rdagıt')
   let sesteolmayanlar = new disbut.MessageButton().setStyle('green').setLabel(`Seste olmayanlar`).setID('sesteolmayanlar')

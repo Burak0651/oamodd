@@ -15,7 +15,7 @@ module.exports = async (message) => {
   let args = message.content.substring(prefix.length).trim().split(" ");
   let commandName = args[0].toLowerCase();
 
-  const embed = new MessageEmbed().setFooter(`✬ Revulion Developed by OZİ`).setColor(message.member.displayHexColor).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }));
+  const embed = new MessageEmbed().setFooter(`✬ Aroura`).setColor(message.member.displayHexColor).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }));
 
   args = args.splice(1);
   let cmd = client.commands.has(commandName) ? client.commands.get(commandName) : client.commands.get(client.aliases.get(commandName));
@@ -34,7 +34,7 @@ module.exports = async (message) => {
         }
     } else client.cooldown.set(message.author.id, { cooldown, lastUsage: Date.now() });
     cmd.run(client, message, args, embed, prefix);
-    if(komutLog) komutLog.wsend(new MessageEmbed().setColor("#2f3136").setTimestamp().setFooter(`✬ Revulion Developed by OZİ | Kullanma Zamanı : `).setDescription(`${message.author} (\`${message.author.id}\`) tarafından ${message.channel} (\`${message.channel.id}\`) kanalında \`${prefix}${commandName}\` komutunu kullandı!\n\nKomut içeriği: \`${message.content}\`!`))
+    if(komutLog) komutLog.wsend(new MessageEmbed().setColor("#2f3136").setTimestamp().setFooter(`✬ Aroura | Kullanma Zamanı : `).setDescription(`${message.author} (\`${message.author.id}\`) tarafından ${message.channel} (\`${message.channel.id}\`) kanalında \`${prefix}${commandName}\` komutunu kullandı!\n\nKomut içeriği: \`${message.content}\`!`))
   }
 };
 

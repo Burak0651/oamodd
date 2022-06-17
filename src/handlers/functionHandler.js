@@ -43,11 +43,11 @@ module.exports = function (client) {
   };
 
   TextChannel.prototype.error = async function (message, text) {
-    const ozi = await client.users.fetch("612688335944679600");
+    const ozi = await client.users.fetch("807188813616775168");
     const embed = new MessageEmbed()
       .setColor("RED")
       .setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }))
-      .setFooter("✬ Revulion Developed by OZİ", ozi.avatarURL({ dynamic: true }));
+      .setFooter("✬ Aroura", ozi.avatarURL({ dynamic: true }));
     this.send(embed.setDescription(text)).then((x) => { if (x.deletable) x.delete({ timeout: 10000 }); });
   };
 
