@@ -19,8 +19,8 @@ module.exports = async (member) => {
   if (guvenilirlik) {
   if(ayar.fakeAccRole) member.roles.add(ayar.fakeAccRole).catch();
   } else if(ayar.unregRoles) member.roles.add(ayar.unregRoles).catch();
-  if (member.user.username.includes(ayar.tag)) { member.setNickname(`${ayar.tag} İsim ' Yaş`).catch(); }
-  else { member.setNickname(`${ayar.ikinciTag} İsim ' Yaş`).catch();}
+  if (member.user.username.includes(ayar.tag)) { member.setNickname(`${ayar.tag} İsim | Yaş`).catch(); }
+  else { member.setNickname(`${ayar.ikinciTag} İsim | Yaş`).catch();}
   
   if (member.user.username.includes(ayar.tag)) {
     await member.roles.add(ayar.ekipRolu)
