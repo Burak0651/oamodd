@@ -22,7 +22,7 @@ run: async (client, message, args, embed, prefix) => {
     if(!uye) 
     {
     message.react(red)
-    message.lineReply(`\`${prefix}isim <@Ozi/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
+    message.lineReply(`\`${prefix}isim <@Etiket/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
     return }
     if(message.author.id === uye.id) 
     {
@@ -47,11 +47,11 @@ run: async (client, message, args, embed, prefix) => {
     if(!isim && !yaş) 
     {
     message.react(red)
-    message.lineReply(`\`${prefix}isim <@Ozi/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
+    message.lineReply(`\`${prefix}isim <@Etiket/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
     return }
     if(!yaş) 
     { setName = `${uye.user.username.includes(ayar.tag) ? ayar.tag : (ayar.ikinciTag ? ayar.ikinciTag : (ayar.tag || ""))} ${isim}`;
-    } else { setName = `${uye.user.username.includes(ayar.tag) ? ayar.tag : (ayar.ikinciTag ? ayar.ikinciTag : (ayar.tag || ""))} ${isim} ' ${yaş}`;
+    } else { setName = `${uye.user.username.includes(ayar.tag) ? ayar.tag : (ayar.ikinciTag ? ayar.ikinciTag : (ayar.tag || ""))} ${isim} | ${yaş}`;
   } uye.setNickname(`${setName}`).catch(err => message.lineReply(`İsim çok uzun.`))
 
     message.react(green)
@@ -62,7 +62,7 @@ ${red} üyesinin toplamda **${data ? `${data.names.length}` : "0"}** isim kayıt
 ${data ? data.names.splice(0, 3).map((x, i) => `\`${x.name}\` (${x.rol}) (<@${x.yetkili}>)`).join("\n") : "Daha önce kayıt olmamış."}
 `)
 .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true, size: 2048 }))
-.setFooter(`Üyesinin önceki isimlerine <!isimler @Ozi/ID> komutuyla bakarak kayıt işlemini gerçekleştirmeniz önerilir.`))
+.setFooter(`Üyesinin önceki isimlerine <.isimler @Etiket/ID> komutuyla bakarak kayıt işlemini gerçekleştirmeniz önerilir.`))
 
 await isimler.findOneAndUpdate({ guildID: message.guild.id, userID: uye.user.id }, { $push: { names: { name: setName, yetkili: message.author.id,  rol: "İsim Değiştirme", date: Date.now() } } }, { upsert: true });
 
