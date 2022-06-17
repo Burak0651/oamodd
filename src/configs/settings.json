@@ -1,12 +1,12 @@
 {
-  "token": "ODY5MTk3OTI0NzI5NDk5NjY4.YP6tpg.tokeniyenilemistimmq",
-  "prefix": [".","!"],
-  "guildID": "899273632436592701",
-  "mongoUrl": "mongodb+srv://burayaya mongo gircen knk@cluster0.nubpc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "owners": ["612688335944679600","",""],
-  "botDurum": "✬ Revulion Developed by OZİ",
-  "botSes": "899273633103507489",
-  "registerPerm": "899273632637919234",
+  "token": "",
+  "prefix": ["."],
+  "guildID": "982541040118538320",
+  "mongoUrl": "",
+  "owners": ["807188813616775168","477180583219298336",""],
+  "botDurum": "✬ Aroura",
+  "botSes": "982890041770639361",
+  "registerPerm": "982541040181465095",
 
   "dmMessages": true,
 
