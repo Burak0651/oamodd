@@ -41,7 +41,7 @@ module.exports = async () => {
     e.voice.setSelfDeaf(true);
     })
   .then(console.log(`Bot ses kanalına bağlandı!`)).catch(err => console.error("[HATA] Bot ses kanalına bağlanamadı!"));
-  client.user.setPresence({ activity: { name: settings.botDurum}, status: "idle" });
+  client.user.setPresence({ activity: { name: settings.botDurum}, status: "online" });
   
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -32,8 +32,8 @@ module.exports = {
     return }
     message.react(green)
     member.roles.set(conf.unregRoles);
-    member.setNickname(`${ayar.ikinciTag} İsim ' Yaş`)
-    message.lineReply(`${member} üyesi, ${message.author} tarafından, kayıtsıza atıldı! ${green}`).then(x=>x.delete({timeout:5000}))
+    member.setNickname(`${ayar.ikinciTag} İsim | Yaş`)
+    message.lineReply(`${member} üyesi, ${message.author} tarafından, kayıtsıza atıldı!`).then(x=>x.delete({timeout:5000}))
   
   },
 };

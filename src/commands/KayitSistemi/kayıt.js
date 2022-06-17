@@ -33,7 +33,7 @@ run: async (client, message, args, embed, prefix) => {
     if(!uye) 
     {
     message.react(red)
-    message.lineReply(`\`${prefix}kayıt <@Ozi/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
+    message.lineReply(`\`${prefix}kayıt <@Etiket/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
     return }
     if(message.author.id === uye.id) 
     {
@@ -58,7 +58,7 @@ run: async (client, message, args, embed, prefix) => {
     if(!isim && !yaş) 
     {
     message.react(red)
-    message.lineReply(`\`${prefix}kayıt <@Ozi/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
+    message.lineReply(`\`${prefix}kayıt <@Etiket/ID> <Isim> <Yaş>\``).then(x=>x.delete({timeout:5000})) 
     return }
 
    const tagModedata = await regstats.findOne({ guildID: message.guild.id })
@@ -107,7 +107,7 @@ ${uye.toString()} üyesinin ismi "${setName}" olarak değiştirildi, bu üye dah
 ${red} üyesinin toplamda **${data ? `${data.names.length}` : "0"}** isim kayıtı bulundu
 ${data ? data.names.splice(0, 3).map((x, i) => `\`${x.name}\` (${x.rol}) (<@${x.yetkili}>)`).join("\n") : "Daha önce kayıt olmamış."}
 
-Üyesinin önceki isimlerine \`.isimler <@Ozi/ID>\` komutuyla bakarak kayıt işlemini gerçekleştirmeniz önerilir.
+Üyesinin önceki isimlerine \`.isimler <@Etiket/ID>\` komutuyla bakarak kayıt işlemini gerçekleştirmeniz önerilir.
     `)
 .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true, size: 2048 }))
 .setFooter(`Lütfen 30 saniye alttaki butonlara basarak kullanıcının cinsiyetini belirleyin.`)
