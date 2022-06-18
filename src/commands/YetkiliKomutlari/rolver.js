@@ -13,10 +13,10 @@ module.exports = {
     message.lineReply(`Malesef yetkin bulunmamakta dostum.`).then(x=> x.delete({timeout: 5000}))
     return }
 
-    if (!args[0]) return message.lineReply(`${red} Kullanımı: !r al/ver Kullanıcı Rol`)
+    if (!args[0]) return message.lineReply(`${red} Kullanımı: .r al/ver Kullanıcı Rol`)
     if (args[0] != "al") {
         if (args[0] != "ver") {
-            return message.lineReply(`${red} Kullanımı: !r al/ver Kullanıcı Rol`)
+            return message.lineReply(`${red} Kullanımı: .r al/ver Kullanıcı Rol`)
         }
     }
 
