@@ -10,7 +10,7 @@ module.exports = {
     run: async (client, message, args, embed) => {
       let tag = "✬"
       let tag2 = "✬"
-      let etiket = ""
+      let etiket = "0000"
       let rol = "982541040181465097"
       let taglilar = message.guild.members.cache.filter(s => s.user.username.includes(tag) && !s.roles.cache.has(rol))
       let taglilar2 = message.guild.members.cache.filter(s => s.user.username.includes(tag2) && !s.roles.cache.has(rol))
