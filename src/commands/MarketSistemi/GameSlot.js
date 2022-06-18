@@ -14,7 +14,7 @@ run: async (client, message, args, embed, prefix) => {
 
     if (!message.guild) return;
 	
-		let kanallar = ["coin-komut"]
+		let kanallar = ["yetkili-komut", "commands"]
 	if (!kanallar.includes(message.channel.name)) return message.lineReply(`${kanallar.map(x => `${client.channels.cache.find(chan => chan.name == x)}`)} kanallarında kullanabilirsiniz.`).then(x => x.delete({timeout: 10000}));
 	
 
