@@ -179,12 +179,12 @@ client.on('message', async message => {
           let filtered = messages.filter((x) => x.author.id === message.author.id).array().splice(0, 7);
           message.channel.bulkDelete(filtered);
                 message.member.roles.add(conf.chatMute);
-                message.channel.send(`${Mute2} Sohbet kanallarını kirletme sebebiyle \`3 dakika\` süresince susturuldunuz, mesajlar temizlendi. Lütfen yavaşlayın. ${message.author}`).then(ozixd => ozixd.delete({ timeout: 5000 }))
+                message.channel.send(`${Mute2} Sohbet kanallarını kirletme sebebiyle \`10 dakika\` süresince susturuldunuz, mesajlar temizlendi. Lütfen yavaşlayın. ${message.author}`).then(ozixd => ozixd.delete({ timeout: 5000 }))
 
                 setTimeout(() => {
                     message.member.roles.remove(conf.chatMute);
-                    message.channel.send(`${Unmute} Sohbet kanallarını kirletme sebebiyle 3 dakika süresince susturmanız bitti. Lütfen tekrarlamayınız. ${message.author}`).then(ozixd => ozixd.delete({ timeout: 5000 }))
-                }, 180000);//9000000
+                    message.channel.send(`${Unmute} Sohbet kanallarını kirletme sebebiyle 10 dakika süresince susturmanız bitti. Lütfen tekrarlamayınız. ${message.author}`).then(ozixd => ozixd.delete({ timeout: 5000 }))
+                }, 600000);//9000000
             } else {
                 userData.msgCount = msgCount;
                 map.set(message.author.id, userData)
