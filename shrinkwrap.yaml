@@ -14,7 +14,9 @@ dependencies:
   moment: 2.29.3
   moment-duration-format: 2.3.2
   mongoose: 5.13.14
+  npm: 8.12.2
   parse-ms: 2.1.0
+  quick.db: 9.0.3
   string-table: 0.1.5
   table: 5.4.6
   weky: 2.0.9
@@ -1105,6 +1107,84 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==
+  /npm/8.12.2:
+    bundledDependencies:
+      - '@isaacs/string-locale-compare'
+      - '@npmcli/arborist'
+      - '@npmcli/ci-detect'
+      - '@npmcli/config'
+      - '@npmcli/fs'
+      - '@npmcli/map-workspaces'
+      - '@npmcli/package-json'
+      - '@npmcli/run-script'
+      - abbrev
+      - archy
+      - cacache
+      - chalk
+      - chownr
+      - cli-columns
+      - cli-table3
+      - columnify
+      - fastest-levenshtein
+      - glob
+      - graceful-fs
+      - hosted-git-info
+      - ini
+      - init-package-json
+      - is-cidr
+      - json-parse-even-better-errors
+      - libnpmaccess
+      - libnpmdiff
+      - libnpmexec
+      - libnpmfund
+      - libnpmhook
+      - libnpmorg
+      - libnpmpack
+      - libnpmpublish
+      - libnpmsearch
+      - libnpmteam
+      - libnpmversion
+      - make-fetch-happen
+      - minipass
+      - minipass-pipeline
+      - mkdirp
+      - mkdirp-infer-owner
+      - ms
+      - node-gyp
+      - nopt
+      - npm-audit-report
+      - npm-install-checks
+      - npm-package-arg
+      - npm-pick-manifest
+      - npm-profile
+      - npm-registry-fetch
+      - npm-user-validate
+      - npmlog
+      - opener
+      - pacote
+      - parse-conflict-json
+      - proc-log
+      - qrcode-terminal
+      - read
+      - read-package-json
+      - read-package-json-fast
+      - readdir-scoped-modules
+      - rimraf
+      - semver
+      - ssri
+      - tar
+      - text-table
+      - tiny-relative-date
+      - treeverse
+      - validate-npm-package-name
+      - which
+      - write-file-atomic
+    dev: false
+    engines:
+      node: ^12.13.0 || ^14.15.0 || >=16
+    hasBin: true
+    resolution:
+      integrity: sha512-TArexqro9wpl/6wz6t6YdYhOoiy/UArqiSsSsqI7fieEhQEswDQSJcgt/LuCDjl6mfCDi0So7S2UZ979qLYRPg==
   /npmlog/5.0.1:
     dependencies:
       are-we-there-yet: 2.0.0
@@ -1231,6 +1311,12 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==
+  /quick.db/9.0.3:
+    dependencies:
+      lodash: 4.17.21
+    dev: false
+    resolution:
+      integrity: sha512-dtO6TI3NBtgPcguCMws+vp/Z8SMFXJoF7OeaYuUpTiappnvD+YaNuClC42vKmEM7YXivQWZXiFJznb7tXaD55w==
   /range-parser/1.2.1:
     dev: false
     engines:
@@ -1648,7 +1734,9 @@ specifiers:
   moment: ^2.29.1
   moment-duration-format: ^2.3.2
   mongoose: ^5.11.20
+  npm: ^8.12.2
   parse-ms: ^2.1.0
+  quick.db: ^9.0.3
   string-table: ^0.1.5
   table: ^5.4.6
   weky: ^2.0.7
