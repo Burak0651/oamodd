@@ -22,7 +22,9 @@
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.11.20",
+    "npm": "^8.12.2",
     "parse-ms": "^2.1.0",
+    "quick.db": "^9.0.3",
     "string-table": "^0.1.5",
     "table": "^5.4.6",
     "weky": "^2.0.7"
