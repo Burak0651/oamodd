@@ -3,7 +3,7 @@ const taggeds = require("../../schemas/taggeds");
 const tagli = require("../../schemas/taggorev");
 const conf = require("../../configs/sunucuayar.json")
 const settings = require("../../configs/settings.json")
-const { red, green} = require("../../configs/emojis.json")
+const { red, onay} = require("../../configs/emojis.json")
 module.exports = {
   conf: {
     aliases: ["tag-aldır", "taglıaldır", "taglı"],
@@ -32,23 +32,23 @@ module.exports = {
     return }
 
     const msg = await message.channel.send( `${member.toString()}, ${message.member.toString()} üyesi sana tag aldırmak istiyor. Kabul ediyor musun?`);
-    msg.react("<a:green:899337284481077298>");
-    msg.react("<a:red:899337291582046228>");
+    msg.react("<a:onay:988764805118718023>");
+    msg.react("<a:redet:899337291582046228>");
 
-    msg.awaitReactions((reaction, user) => ["green", "red"].includes(reaction.emoji.name) && user.id === member.user.id, {
+    msg.awaitReactions((reaction, user) => ["onay", "red"].includes(reaction.emoji.name) && user.id === member.user.id, {
       max: 1,
       time: 30000,
       errors: ['time']
     }).then(async collected => {
       const reaction = collected.first();
-      if (reaction.emoji.name === 'green') {
+      if (reaction.emoji.name === 'onay') {
         await coin.findOneAndUpdate({ guildID: member.guild.id, userID: message.author.id }, { $inc: { coin: settings.taggedCoin } }, { upsert: true });
         const tagData = await tagli.findOne({ guildID: message.guild.id, userID: message.author.id });
         if (tagData)
         {
         await tagli.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $inc: { tagli: 1 } }, { upsert: true });
         }
-        msg.edit(`${message.author}, ${member.toString()} Adlı kullanıcı senin isteğini onayladı. ${green}`).then(x => x.delete({timeout: 5000}))
+        msg.edit(`${message.author}, ${member.toString()} Adlı kullanıcı senin isteğini onayladı.`).then(x => x.delete({timeout: 5000}))
         await taggeds.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $push: { taggeds: member.user.id } }, { upsert: true });
       } else {
         msg.edit(`${message.author}, ${member.toString()} Adlı kullanıcı senin isteğini onaylamadı.`).then(x => x.delete({timeout: 5000}))
