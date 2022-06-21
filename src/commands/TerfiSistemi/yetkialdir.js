@@ -31,8 +31,8 @@ module.exports = {
     return }
 
     const msg = await message.channel.send( `${member.toString()}, ${message.member.toString()} üyesi sana yetki vermek istiyor. Kabul ediyor musun?`);
-    msg.react("<a:green:988771432551030844>");
-    msg.react("<a:red:988771405296447488>");
+    msg.react("<a:green:987441938418503750>");
+    msg.react("<a:red:987441940628930623>");
 
     msg.awaitReactions((reaction, user) => ["green", "red"].includes(reaction.emoji.name) && user.id === member.user.id, {
       max: 1,
@@ -47,8 +47,8 @@ module.exports = {
        client.channels.cache.get(conf.yetkiLog).wsend(`${message.author} \`(${message.author.id}\` kişisi ${member} \`(${member.id})\` kişisini yetkiye aldı!`)
         member.roles.add(conf.yetkiRolleri)
       } else {
-        msg.edit(`${member.toString()} üyesi, yetki aldırma teklifini reddetti! :red:`).then(x => x.delete({timeout: 5000}))
+        msg.edit(`${member.toString()} üyesi, yetki aldırma teklifini reddetti! ${red}`).then(x => x.delete({timeout: 5000}))
       }
-    }).catch(() => msg.edit(`:red: Yetki aldırma işlemi iptal edildi!`))
+    }).catch(() => msg.edit(`${red} Yetki aldırma işlemi iptal edildi!`))
   }
 }

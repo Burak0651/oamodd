@@ -32,8 +32,8 @@ module.exports = {
     return }
 
     const msg = await message.channel.send( `${member.toString()}, ${message.member.toString()} üyesi sana tag aldırmak istiyor. Kabul ediyor musun?`);
-    msg.react("<a:green:988771432551030844>");
-    msg.react("<a:red:988771405296447488>");
+    msg.react("<a:green:987441938418503750>");
+    msg.react("<a:red:987441940628930623>");
 
     msg.awaitReactions((reaction, user) => ["green", "red"].includes(reaction.emoji.name) && user.id === member.user.id, {
       max: 1,
