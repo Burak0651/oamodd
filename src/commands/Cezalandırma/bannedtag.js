@@ -7,7 +7,7 @@ module.exports = {
   conf: {
     aliases: ["yasaklı-tag", "bannedtag","ytag"],
     name: "yasaklıtag",
-    help: "yasaklıtag [ekle/sil] [tag] / [say/liste]",
+    help: "yasaklıtag [ekle/kaldır] [tag] / [kontrol/liste]",
   },
 
   /**
@@ -35,7 +35,7 @@ module.exports = {
                     üyeler.map(x => {
                         if (x.roles.cache.has(conf.jailRole)) return
                         setTimeout(() => {
-                            x.setNickname('Yasaklı Tag');
+                            x.setNickname('✭ Yasaklı | Tag');
                             x.roles.set(conf.jailRole)
                         }, 1000)
                     })
