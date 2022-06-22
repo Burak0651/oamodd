@@ -99,7 +99,7 @@ module.exports = {
                 res.save().catch(e => console.log(e))
                 üyeler.map(x => {
                     setTimeout(async () => {
-                    x.setNickname(`${conf.tag} İsim ' Yaş`);
+                    x.setNickname(`${conf.tag} İsim | Yaş`);
                     x.roles.set(conf.unregRoles)
                     }, 1000);
                     x.send(`${message.guild.name}  adlı sunucumuza olan erişim engeliniz kalktı. İsminizden (`+ args[1] +`) sembolünü kaldırarak sunucumuza erişim hakkı kazandınız. Keyifli Sohbetler**-Yönetim**`)
