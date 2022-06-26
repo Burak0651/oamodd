@@ -20,21 +20,21 @@ module.exports = {
     if (!message.member.hasPermission(8) && !conf.warnHammer.some(x => message.member.roles.cache.has(x))) 
     {
     message.react(red)
-    message.channel.send( "Yeterli yetkin bulunmuyor!").then(x=>x.delete({timeout:5000})) }
+    message.channel.send("Yeterli yetkin bulunmuyor!").then(x=>x.delete({timeout:5000})) }
     const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     if (!member) 
     {
     message.react(red)
-    message.channel.send( "Bir üye belirtmelisin!").then(x=>x.delete({timeout:5000})) }
+    message.channel.send("Bir üye belirtmelisin!").then(x=>x.delete({timeout:5000})) }
     const reason = args.slice(2).join(" ") || "Belirtilmedi!";
     if (!message.member.hasPermission(8) && member.roles.highest.position >= message.member.roles.highest.position) 
     {
     message.react(red)
-    message.channel.send( "Kendinle aynı yetkide ya da daha yetkili olan birini uyaramazsın!").then(x=>x.delete({timeout:5000})) }
+    message.channel.send("Kendinle aynı yetkide ya da daha yetkili olan birini uyaramazsın!").then(x=>x.delete({timeout:5000})) }
     if (!member.manageable) 
     {
     message.react(red)
-    message.channel.send( "Bu üyeyi susturamıyorum!").then(x=>x.delete({timeout:5000})) }
+    message.channel.send("Bu üyeyi susturamıyorum!").then(x=>x.delete({timeout:5000})) }
     await coin.findOneAndUpdate({ guildID: member.guild.id, userID: member.user.id }, { $inc: { coin: -10 } }, { upsert: true });
     await ceza.findOneAndUpdate({ guildID: message.guild.id, userID: member.user.id }, { $push: { ceza: 1 } }, { upsert: true });
     await ceza.findOneAndUpdate({ guildID: message.guild.id, userID: member.user.id }, { $inc: { top: 1 } }, { upsert: true });
