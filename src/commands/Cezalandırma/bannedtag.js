@@ -52,7 +52,7 @@ module.exports = {
                     üyeler.map(x => {
                         if (x.roles.cache.has(conf.jailRole)) return
                         setTimeout(() => {
-                            x.setNickname('Yasaklı Tag');
+                            x.setNickname('✭ Yasaklı | Tag');
                             x.roles.set(conf.jailRole)
                         }, 1000)
                        x.send(`${message.guild.name} adlı sunucumuza olan erişiminiz engellendi! Sunucumuzda yasaklı olan bir simgeyi (`+ args[1] +`) isminizde taşımanızdan dolayıdır. Sunucuya erişim sağlamak için simgeyi (`+ args[1] +`) isminizden çıkartmanız gerekmektedir.\n\nSimgeyi (`+ args[1] +`) isminizden kaldırmanıza rağmen üstünüzde halen Yasaklı Tag rolü varsa sunucudan gir çık yapabilirsiniz veya sağ tarafta bulunan yetkililer ile iletişim kurabilirsiniz. **-Yönetim**\n\n__Sunucu Tagımız__\n**${conf.tag}**`)
