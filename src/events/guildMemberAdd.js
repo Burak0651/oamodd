@@ -95,7 +95,6 @@ Sunucumuza **${member.guild.name}** üyesinin davetiyle katıldın ve seninle bi
 Sunucu kurallarımız ${kurallar} kanalında belirtilmiştir. Unutma sunucu içerisinde ki \`ceza-i işlemler\` kuralları okuduğunu varsayarak gerçekleştirilecek.\n
 Tagımıza ulaşmak için herhangi bir kanala \`.tag\` yazabilirsiniz. ${tagModedata ? tagModedata.tagMode === true ? `(**Şuan da taglı alımdayız**)`:``:``} :tada: :tada: :tada:\n <@&982541040181465095>`);
 channel.wsend(`${member}, sunucuya katıldı! Davet Eden: **Sunucu Özel URL** :tada:`)
-channel.wsend(`https://cdn.discordapp.com/attachments/849558016675151903/990550903843086356/standard_1.gif`)
 return }
 if (!invite.inviter) return;
 await inviteMemberSchema.findOneAndUpdate({ guildID: member.guild.id, userID: member.user.id }, { $set: { inviter: invite.inviter.id, date: Date.now() } }, { upsert: true });
@@ -116,7 +115,7 @@ Sunucumuza **${invite.inviter}** üyesinin davetiyle katıldın ve seninle birli
 Sunucu kurallarımız ${kurallar} kanalında belirtilmiştir. Unutma sunucu içerisinde ki \`ceza-i işlemler\` kuralları okuduğunu varsayarak gerçekleştirilecek.\n
 Tagımıza ulaşmak için herhangi bir kanala \`.tag\` yazabilirsiniz. ${tagModedata ? tagModedata.tagMode === true ? `(**Şuan da taglı alımdayız**)`:``:``} :tada: :tada: :tada:\n <@&982541040181465095>`);
 channel.wsend(`${member}, ${invite.inviter.tag} davetiyle katıldı! (**${total}**)`)
-channel.wsend(`https://cdn.discordapp.com/attachments/849558016675151903/990550903843086356/standard_1.gif`)
+kayitchannel.wsend(`https://cdn.discordapp.com/attachments/849558016675151903/990550903843086356/standard_1.gif`)
 }
 await coin.findOneAndUpdate({ guildID: member.guild.id, userID: invite.inviter.id }, { $inc: { coin: 1 } }, { upsert: true });
 const gorevData = await gorev.findOne({ guildID: member.guild.id, userID: invite.inviter.id });

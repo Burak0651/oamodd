@@ -30,7 +30,7 @@ module.exports = {
             message.channel.send(embed.setDescription(`${green} taglı alım modu başarıyla deaktif edildi!`))
             break;
         default:
-            message.channel.send(embed.setDescription(`${message.member} Hatalı kullanım! \`\`\`!taglıalım aç/kapat\`\`\``));
+            message.channel.send(embed.setDescription(`${message.member} Hatalı kullanım! \`\`\`.taglıalım aç/kapat\`\`\``));
             break;
     }
 }

@@ -63,7 +63,7 @@ run: async (client, message, args, embed, prefix) => {
 
    const tagModedata = await regstats.findOne({ guildID: message.guild.id })
     if (tagModedata && tagModedata.tagMode === true) {
-    if(!uye.roles.cache.has("855159733048311818") && !uye.roles.cache.has(ayar.vipRole) && !uye.roles.cache.has(ayar.boosterRolu)) return message.lineReply(embed.setDescription(`${uye.toString()} isimli üyenin kullanıcı adında tagımız (\`✭, Shéw, #1983\`) olmadığı, <@&${ayar.boosterRolu}>, <@&${ayar.vipRole}> Rolü olmadığı için isim değiştirmekden başka kayıt işlemi yapamazsınız.`));
+    if(!uye.roles.cache.has("982541040181465097") && !uye.roles.cache.has(ayar.vipRole) && !uye.roles.cache.has(ayar.boosterRolu)) return message.lineReply(embed.setDescription(`${uye.toString()} isimli üyenin kullanıcı adında tagımız (\`✭\`) olmadığı, <@&${ayar.boosterRolu}>, <@&${ayar.vipRole}> Rolü olmadığı için isim değiştirmekden başka kayıt işlemi yapamazsınız.`));
     }
 
     if(!yaş) 
@@ -208,7 +208,7 @@ if(ayar.chatChannel && client.channels.cache.has(ayar.chatChannel)) client.chann
 
 if(button.id === "İPTAL") {
 msg.edit(`İşlem Başarıyla İptal Edildi ${green}`,{components: null}); 
-uye.setNickname(`• İsim ' Yaş`)
+uye.setNickname(`✭ İsim | Yaş`)
 await uye.roles.add(ayar.unregRoles)
 await uye.roles.remove(ayar.kizRolleri)
 await uye.roles.remove(ayar.erkekRolleri)
