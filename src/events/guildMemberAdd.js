@@ -37,7 +37,7 @@ module.exports = async (member) => {
     if (tagModedata && tagModedata.tagMode === false) {
       if (otoreg) {
         if (member.manageable) await member.roles.set(otoreg.roleID)
-        member.setNickname(`${ayar.tag} ${otoreg.name}`);
+        member.setNickname(`${ayar.tag} ${otoreg.name} | ${otoreg.age}`);
        if(ayar.chatChannel && client.channels.cache.has(ayar.chatChannel)) client.channels.cache.get(ayar.chatChannel).send(`Aramıza hoşgeldin **${member}**! Sunucumuzda daha önceden kayıtın bulunduğu için direkt içeriye alındınız. Kuralları okumayı unutma!`).then(x => x.delete({timeout: 10000})) 
       }
 }
@@ -82,7 +82,7 @@ await bannedTag.findOne({ guildID: settings.guildID }, async ( err, res) => {
 
   if(res.taglar.some(x => member.user.username.includes(x))) { 
     await member.roles.set(ayar.jailRole)
-    await member.setNickname("Yasaklı Tag")
+    await member.setNickname("✭ Yasaklı | Tag")
     if (settings.dmMessages) member.send(`${member.guild.name} adlı sunucumuza olan erişiminiz engellendi! Sunucumuzda yasaklı olan bir simgeyi (${x}) isminizde taşımanızdan dolayıdır. Sunucuya erişim sağlamak için simgeyi (${x}) isminizden çıkartmanız gerekmektedir.\n\nSimgeyi (${x}) isminizden kaldırmanıza rağmen üstünüzde halen Yasaklı Tag rolü varsa sunucudan gir çık yapabilirsiniz veya sağ tarafta bulunan yetkililer ile iletişim kurabilirsiniz. **-Yönetim**\n\n__Sunucu Tagımız__\n**${conf.tag}**`).catch(() => {});
 }
 })
@@ -95,6 +95,7 @@ Sunucumuza **${member.guild.name}** üyesinin davetiyle katıldın ve seninle bi
 Sunucu kurallarımız ${kurallar} kanalında belirtilmiştir. Unutma sunucu içerisinde ki \`ceza-i işlemler\` kuralları okuduğunu varsayarak gerçekleştirilecek.\n
 Tagımıza ulaşmak için herhangi bir kanala \`.tag\` yazabilirsiniz. ${tagModedata ? tagModedata.tagMode === true ? `(**Şuan da taglı alımdayız**)`:``:``} :tada: :tada: :tada:\n <@&982541040181465095>`);
 channel.wsend(`${member}, sunucuya katıldı! Davet Eden: **Sunucu Özel URL** :tada:`)
+channel.wsend(`https://cdn.discordapp.com/attachments/849558016675151903/990550903843086356/standard_1.gif`)
 return }
 if (!invite.inviter) return;
 await inviteMemberSchema.findOneAndUpdate({ guildID: member.guild.id, userID: member.user.id }, { $set: { inviter: invite.inviter.id, date: Date.now() } }, { upsert: true });
@@ -115,7 +116,7 @@ Sunucumuza **${invite.inviter}** üyesinin davetiyle katıldın ve seninle birli
 Sunucu kurallarımız ${kurallar} kanalında belirtilmiştir. Unutma sunucu içerisinde ki \`ceza-i işlemler\` kuralları okuduğunu varsayarak gerçekleştirilecek.\n
 Tagımıza ulaşmak için herhangi bir kanala \`.tag\` yazabilirsiniz. ${tagModedata ? tagModedata.tagMode === true ? `(**Şuan da taglı alımdayız**)`:``:``} :tada: :tada: :tada:\n <@&982541040181465095>`);
 channel.wsend(`${member}, ${invite.inviter.tag} davetiyle katıldı! (**${total}**)`)
-kayitchannel.wsend(`https://cdn.discordapp.com/attachments/849558016675151903/990550903843086356/standard_1.gif`)
+channel.wsend(`https://cdn.discordapp.com/attachments/849558016675151903/990550903843086356/standard_1.gif`)
 }
 await coin.findOneAndUpdate({ guildID: member.guild.id, userID: invite.inviter.id }, { $inc: { coin: 1 } }, { upsert: true });
 const gorevData = await gorev.findOne({ guildID: member.guild.id, userID: invite.inviter.id });
