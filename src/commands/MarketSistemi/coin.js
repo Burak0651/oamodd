@@ -40,7 +40,7 @@ let dolarData = await dolar.findOne({ guildID: message.guild.id, userID: message
 
     ctx.font ='20px bebas neue',
     ctx.fillStyle = '#cac8c8';
-    ctx.fillText(`        ${member.id}`, canvas.width / 8, canvas.height / 1.25);
+    ctx.fillText(`     ${member.id}`, canvas.width / 8, canvas.height / 1.25);
 
     ctx.font ='30px bebas neue',
     ctx.fillStyle = '#cac8c8';
