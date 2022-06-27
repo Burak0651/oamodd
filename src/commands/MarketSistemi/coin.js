@@ -31,7 +31,7 @@ let dolarData = await dolar.findOne({ guildID: message.guild.id, userID: message
     const canvas = Canvas.createCanvas(388, 234);
     const ctx = canvas.getContext('2d');
 
-    const background = await Canvas.loadImage('');
+    const background = await Canvas.loadImage('https://cdn.discordapp.com/attachments/983341566624137276/990897911233663026/unknown.png');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
     const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
@@ -40,11 +40,11 @@ let dolarData = await dolar.findOne({ guildID: message.guild.id, userID: message
 
     ctx.font ='20px bebas neue',
     ctx.fillStyle = '#cac8c8';
-    ctx.fillText(`${member.id}`, canvas.width / 8, canvas.height / 1.25);
+    ctx.fillText(`        ${member.id}`, canvas.width / 8, canvas.height / 1.25);
 
     ctx.font ='30px bebas neue',
     ctx.fillStyle = '#cac8c8';
-    ctx.fillText(`${dolarData ? Math.floor(parseInt(dolarData.dolar)) : 0} Dolar`, canvas.width / 4, canvas.height / 1.60);
+    ctx.fillText(`    ${dolarData ? Math.floor(parseInt(dolarData.dolar)) : 0} Dolar`, canvas.width / 4, canvas.height / 1.60);
 
   let yazıqwe = `${member.user.username}`
   if(yazıqwe.length >= 17) {yazıqwe = `İsmin Çok Uzun`}
@@ -76,7 +76,7 @@ let dolarData = await dolar.findOne({ guildID: message.guild.id, userID: message
   ctx.closePath();
 }
 
-  const attachment = new MessageAttachment(canvas.toBuffer(), 'ozi.png');
+  const attachment = new MessageAttachment(canvas.toBuffer(), 'unknown.png');
 
   message.channel.send(`[ __${member}__ ] kişisinin bakiyesi ;`, attachment)
 }
