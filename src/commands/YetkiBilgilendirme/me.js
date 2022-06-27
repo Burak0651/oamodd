@@ -167,12 +167,12 @@ ${yetkiData ? `${yetkiData.yetkis.length} kişi` : "Veri bulunmuyor."}
        `, false)
       
       .addField(`${star} **Puan Detayları:**`, `
-      ${miniicon} Kayıtlar: \`${toplamData ? toplamData.toplams.length : 0} (Puan Etkisi: +${toplamData ? toplamData.toplams.length*5.5 : 0})\`
-      ${miniicon} Taglılar: \`${taggedData ? taggedData.taggeds.length : 0} (Puan Etkisi: +${taggedData ? taggedData.taggeds.length*25 : 0})\`
-      ${miniicon} Davetler: \`${total} (Puan Etkisi: +${total*15})\`
-      ${miniicon} Yetkililer: \`${yetkiData ? yetkiData.yetkis.length : 0} kişi (Puan Etkisi: +${yetkiData ? yetkiData.yetkis.length*30 : 0})\`
-      ${miniicon} Chat Puan: \`${messageData ? messageData.topStat : 0} mesaj (Puan Etkisi: +${messageData ? messageData.topStat*2 : 0})\`
-      ${miniicon} Sesli Puan: \`${moment.duration(voiceData ? voiceData.topStat : 0).format("h")} saat (Puan Etkisi: +${moment.duration(voiceData ? voiceData.topStat : 0).format("h")*240})\`
+      ${miniicon} Kayıtlar: \`${toplamData ? toplamData.toplams.length : 0} (Puan Etkisi: +${toplamData ? toplamData.toplams.length*30 : 0})\`
+      ${miniicon} Taglılar: \`${taggedData ? taggedData.taggeds.length : 0} (Puan Etkisi: +${taggedData ? taggedData.taggeds.length*50 : 0})\`
+      ${miniicon} Davetler: \`${total} (Puan Etkisi: +${total*40})\`
+      ${miniicon} Yetkililer: \`${yetkiData ? yetkiData.yetkis.length : 0} kişi (Puan Etkisi: +${yetkiData ? yetkiData.yetkis.length*100 : 0})\`
+      ${miniicon} Chat Puan: \`${messageData ? messageData.topStat : 0} mesaj (Puan Etkisi: +${messageData ? messageData.topStat*10 : 0})\`
+      ${miniicon} Sesli Puan: \`${moment.duration(voiceData ? voiceData.topStat : 0).format("h")} saat (Puan Etkisi: +${moment.duration(voiceData ? voiceData.topStat : 0).format("h")*600})\`
        `, false)
       
       .addField(`${star} **Yetki Durumu:**`, `
@@ -193,22 +193,22 @@ msg.edit({
     ${member.toString()}, (${member.roles.highest}) üyesinin \`${moment(Date.now()).format("LLL")}\` tarihinden itibaren \`${message.guild.name}\` sunucusunda genel puanlama tablosu aşağıda belirtilmiştir.
 `) 
 .addField(`${star} **Puan Detayları:**`, `
-${miniicon} Kayıt: (\`Puan Etkisi: +${toplamData ? toplamData.toplams.length*5.5 : 0}\`)
-${miniicon} Taglı: (\`Puan Etkisi: +${taggedData ? taggedData.taggeds.length*25 : 0}\`)
-${miniicon} Davet: (\`Puan Etkisi: +${total*15}\`)
-${miniicon} Yetkili: (\`Puan Etkisi: +${yetkiData ? yetkiData.yetkis.length*30 : 0}\`)
-${miniicon} Toplam Ses: (\`Puan Etkisi: +${moment.duration(voiceData ? voiceData.topStat : 0).format("h")*240}\`)
-${miniicon} Toplam Mesaj: (\`Puan Etkisi: +${messageData ? messageData.topStat*2 : 0}\`)
+${miniicon} Kayıt: (\`Puan Etkisi: +${toplamData ? toplamData.toplams.length*30 : 0}\`)
+${miniicon} Taglı: (\`Puan Etkisi: +${taggedData ? taggedData.taggeds.length*50 : 0}\`)
+${miniicon} Davet: (\`Puan Etkisi: +${total*40}\`)
+${miniicon} Yetkili: (\`Puan Etkisi: +${yetkiData ? yetkiData.yetkis.length*100 : 0}\`)
+${miniicon} Toplam Ses: (\`Puan Etkisi: +${moment.duration(voiceData ? voiceData.topStat : 0).format("h")*600}\`)
+${miniicon} Toplam Mesaj: (\`Puan Etkisi: +${messageData ? messageData.topStat*10 : 0}\`)
 ${miniicon} Toplam Aldığın Cezalar : ${cezapuanData ? cezapuanData.cezapuan.length : 0} (\`Toplam ${cezaData ? cezaData.ceza.length : 0}\`)
  `, false)
 
 .addField(`${star} **Net Puanlama Bilgisi**`, `
-${miniicon} Kayıt işlemi yaparak, \`+5.5\` puan kazanırsın.
-${miniicon} Taglı üye belirleyerek, \`+25\` puan kazanırsınız.
-${miniicon} İnsanları davet ederek, \`+15\` puan kazanırsın.
-${miniicon} İnsanları yetkili yaparak, \`+30\` puan kazanırsın.
-${miniicon} Seste kalarak, ortalama olarak \`+4\` puan kazanırsınız.
-${miniicon} Yazı yazarak, ortalama olarak, \`+2\` puan kazanırsınız.
+${miniicon} Kayıt işlemi yaparak, \`+30\` puan kazanırsın.
+${miniicon} Taglı üye belirleyerek, \`+50\` puan kazanırsınız.
+${miniicon} İnsanları davet ederek, \`+40\` puan kazanırsın.
+${miniicon} İnsanları yetkili yaparak, \`+100\` puan kazanırsın.
+${miniicon} Seste kalarak, ortalama olarak \`+10\` puan kazanırsınız.
+${miniicon} Yazı yazarak, ortalama olarak, \`+10\` puan kazanırsınız.
  `, false)
 
 .addField(`${star} **Puan Durumu:**`, `
