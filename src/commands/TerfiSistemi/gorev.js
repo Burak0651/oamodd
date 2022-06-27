@@ -68,12 +68,12 @@ message.channel.send(embed.setDescription(`
 ${member.toString()}, (${member.roles.highest}) rolüne ait görevlerin aşağıda belirtilmiştir. Görevler tamamlandığında tamamladığın görevlerin ödüllerini almak için \`.görevlerim ödül\` komutu ile alabilirsiniz.  
 
 Kalan Süre: \`${moment.duration(moment().endOf('day').valueOf() - Date.now()).format("H [saat], m [dakika] s [saniye]")}\`
-5 görevi tamamlamak sana toplam \`120 Coin\` verecektir!
+5 görevi tamamlamak sana toplam \`1100 Coin\` verecektir!
           
-${coinStatus1} **Ödül :** ${rewards} \`30\` Coin\n
-${coinStatus2} **Ödül :** ${rewards} \`30\` Coin\n
-${coinStatus3} **Ödül :** ${rewards} \`30\` Coin\n
-${coinStatus4} **Ödül :** ${rewards} \`30\` Coin
+${coinStatus1} **Ödül :** ${rewards} \`200\` Coin\n
+${coinStatus2} **Ödül :** ${rewards} \`200\` Coin\n
+${coinStatus3} **Ödül :** ${rewards} \`500\` Coin\n
+${coinStatus4} **Ödül :** ${rewards} \`200\` Coin
 ${coinStatus}
 `))
 }
