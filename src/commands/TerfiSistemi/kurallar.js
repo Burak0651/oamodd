@@ -11,7 +11,7 @@ module.exports = {
   run: async (client, message, args, embed) => { 
 const coinData = await coin.find({ guildID: message.guild.id }).sort({ coin: -1 });
 message.channel.send(embed.setDescription(`
-**✭ Aroura Sohbet Kuralları :
+**✭ Aroura Sohbet Kuralları**:
 
 ✭ Sunucumuzda kesinlike her türlü küfür yasaktır .
 
@@ -19,7 +19,7 @@ message.channel.send(embed.setDescription(`
 
 ✭ Din ve milli küfürler yasaktır.
 
-✭ Aroura Ses Kuralları :
+**✭ Aroura Ses Kuralları**:
 
 ✭ Ses programı ile trol yapmak kesinlikle yasaktır.
 
@@ -27,14 +27,13 @@ message.channel.send(embed.setDescription(`
 
 ✭ Rahatsız edici sesler çıkarmak yasaktır.
 
-✭ Aroura Genel Kurallar :
+**✭ Aroura Genel Kurallar**:
 
 ✭ Ses ve metin kanallarında dozunu çıkartarak trol yapmak yasaktır.
 
 ✭ Uyarı yapılmasına rağmen hala kişilere rahatsızlık vermek yasaktır.
 
 ✭ Dm'den sunucu üyelerini rahatsız etmek yasaktır.
-
-✭ Kuralları okuduysanız tike basın. )\`**
+\
 `))   
 }}
