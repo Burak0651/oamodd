@@ -6,8 +6,8 @@ const { altin2 } = require("../../configs/emojis.json");
 module.exports = {
     conf: {
       aliases: ["cash","para"],
-      name: "para",
-      help: "para"
+      name: ["para","cash"],
+      help: ["para","cash"]
     },
 
     run: async (client, message, args,embed) => {
@@ -31,7 +31,7 @@ let dolarData = await dolar.findOne({ guildID: message.guild.id, userID: message
     const canvas = Canvas.createCanvas(388, 234);
     const ctx = canvas.getContext('2d');
 
-    const background = await Canvas.loadImage('https://media.discordapp.net/attachments/899273632696631365/910532483282522162/ozi_card_3.png');
+    const background = await Canvas.loadImage('');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
     const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
