@@ -1,5 +1,12 @@
-exports.run = async (client, msg, args) => {
-    let ask=[
+module.exports = {
+    conf: {
+      aliases: ["link","url"],
+      name: "link",
+      help: "link"
+    },
+  
+run: async (client, message, args) => {
+  let ask=[
       "Aşkölçer %3 Gösteriyor.",
       "Aşkölçer %6 Gösteriyor.",
       "Aşkölçer %9 Gösteriyor.",
@@ -49,16 +56,3 @@ exports.run = async (client, msg, args) => {
  
  
   }
- 
-  exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: [],
-    permLevel: 0
-   };
- 
-  exports.help = {
-    name: 'ship',
-    description: 'Aşk Ölçmeni sağlar.',
-    usage: 'ship'
-   }
