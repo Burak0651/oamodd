@@ -17,63 +17,63 @@ moment.locale("tr");
 
 module.exports = {
   conf: {
-    aliases: ["kpanel"],
-    name: "kpanel",
-    help: "kpanel",
+    aliases: ["kontrolpanel"],
+    name: "kontrolpanel",
+    help: "kontrolpanel",
     owner: true
   },
  
     run: async (client, message, args, durum, kanal) => {
  
- let ozi = new disbut.MessageMenuOption()
+ let aroura = new disbut.MessageMenuOption()
  .setLabel("Sunucuya Katılma Tarihiniz")
- .setValue("ozi")
+ .setValue("aroura")
  .setEmoji("915754675247120465")
 
- let ozi1 = new disbut.MessageMenuOption()
+ let aroura1 = new disbut.MessageMenuOption()
  .setLabel("Üzerinde Bulunan Rollerin Listesi")
- .setValue("ozi1")
+ .setValue("aroura1")
  .setEmoji("915754675247120465")
 
- let ozi2 = new disbut.MessageMenuOption()
+ let aroura2 = new disbut.MessageMenuOption()
  .setLabel("Hesabınızın Açılış Tarihi")
- .setValue("ozi2")
+ .setValue("aroura2")
  .setEmoji("915754675247120465")
 
- let ozi3 = new disbut.MessageMenuOption()
+ let aroura3 = new disbut.MessageMenuOption()
  .setLabel("Toplam invite Bilgileri")
- .setValue("ozi3")
+ .setValue("aroura3")
  .setEmoji("915754675247120465")
 
- let ozi4 = new disbut.MessageMenuOption()
+ let aroura4 = new disbut.MessageMenuOption()
  .setLabel("Tekrar Kayıt Olma")
- .setValue("ozi4")
+ .setValue("aroura4")
  .setEmoji("915754675247120465")
 
- let ozi5 = new disbut.MessageMenuOption()
+ let aroura5 = new disbut.MessageMenuOption()
  .setLabel("Sunucu Bilgileri")
- .setValue("ozi5")
+ .setValue("aroura5")
  .setEmoji("915754675247120465")
 
- let ozi6 = new disbut.MessageMenuOption()
+ let aroura6 = new disbut.MessageMenuOption()
  .setLabel("İsim Bilgileri")
- .setValue("ozi6")
+ .setValue("aroura6")
  .setEmoji("915754675247120465")
 
- let ozi7 = new disbut.MessageMenuOption()
+ let aroura7 = new disbut.MessageMenuOption()
  .setLabel("Toplam Mesaj Bilgileri")
- .setValue("ozi7")
+ .setValue("aroura7")
  .setEmoji("915754675247120465")
 
- let ozi8 = new disbut.MessageMenuOption()
+ let aroura8 = new disbut.MessageMenuOption()
  .setLabel("Toplam Ses Bilgileri")
- .setValue("ozi8")
+ .setValue("aroura8")
  .setEmoji("915754675247120465")
 
  let kpanel = new disbut.MessageMenu();
- kpanel.setID("kpanel");
+ kpanel.setID("987642871786131466");
  kpanel.setPlaceholder(`Kullanıcı Menüsü`)
- kpanel.addOptions(ozi,ozi1,ozi2,ozi3,ozi4,ozi5,ozi6,ozi7,ozi8);
+ kpanel.addOptions(aroura,aroura1,aroura2,aroura3,aroura4,aroura5,aroura6,aroura7,aroura8);
 
   
  message.channel.send(`${star} \`${message.guild.name}\` Sunucusu içerisi;\nUlaşmak istediğiniz bilgilere menüden tıklamanız yeterli olucaktır.`, kpanel);
@@ -126,21 +126,21 @@ const category = async (parentsArray) => {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-      if (menu.values[0] === "ozi") {
+      if (menu.values[0] === "aroura") {
         menu.reply.edit(`Sunucuya Katılma Tarihiniz :  \`${moment(menu.clicker.member.joinedAt).format('D/MMMM/YYYY')}\``)
     }
 
-    if (menu.values[0] === "ozi1") {
+    if (menu.values[0] === "aroura1") {
         menu.reply.edit(`Üzerinde Bulunan Rollerin Listesi ;
         
 ${(menu.clicker.member.roles.cache.filter(a => a.name !== '@everyone').map(a => a).join(' ') ? menu.clicker.member.roles.cache.filter(a => a.name !== '@everyone').map(a => a).join(', ') : 'Hiç yok.')}`)
     }
 
-    if (menu.values[0] === "ozi2") {
+    if (menu.values[0] === "aroura2") {
         menu.reply.edit(`Hesabınızın Açılış Tarihi :  \`${moment(menu.clicker.member.user.createdAt).format("LLL")}\``)
     }
 
-    if (menu.values[0] === "ozi3") {
+    if (menu.values[0] === "aroura3") {
         menu.reply.edit(`
 ${menu.clicker.member.toString()}, üyesinin \`${moment(Date.now() + (1000*60*60*3)).format("LLL")}\` tarihinden  itibaren \`${menu.guild.name}\` sunucusunda toplam invite bilgileri aşağıda belirtilmiştir.
 Toplam **${regular}** davet.
@@ -150,13 +150,13 @@ ${miniicon} \`Günlük: ${daily}, Haftalık: ${weekly}, Taglı: ${tagged}\`
 `)
     }
 
-    if (menu.values[0] === "ozi4") {
+    if (menu.values[0] === "aroura4") {
         await member.roles.set(ayarlar.unregRoles);
 
         menu.reply.edit(`${menu.clicker.member.toString()} üyesi başarıyla kayıtsıza atıldı!`)
     }
 
-    if (menu.values[0] === "ozi5") {
+    if (menu.values[0] === "aroura5") {
         menu.reply.edit(`
 ${miniicon} Sesli kanallardaki üye sayısı : \`${(menu.guild.members.cache.filter((x) => x.voice.channel).size)}\`
 ${miniicon} Sunucudaki toplam üye sayısı : \`${(menu.guild.memberCount)}\`
@@ -165,7 +165,7 @@ ${miniicon} Sunucu destek numarası : \`${(menu.guild.id)}\`
 `)
     }
 
-    if (menu.values[0] === "ozi6") {
+    if (menu.values[0] === "aroura6") {
 
      const ambed = new Discord.MessageEmbed()
      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
@@ -175,7 +175,7 @@ ${miniicon} Sunucu destek numarası : \`${(menu.guild.id)}\`
         menu.reply.edit(ambed,true)
     }
 
-    if (menu.values[0] === "ozi7") {
+    if (menu.values[0] === "aroura7") {
         menu.reply.edit(`
 ${menu.clicker.member.toString()}, üyesinin \`${moment(Date.now() + (1000*60*60*3)).format("LLL")}\` tarihinden  itibaren \`${menu.guild.name}\` sunucusunda toplam mesaj bilgileri aşağıda belirtilmiştir.
 ${star} **Mesaj İstatistiği**
@@ -185,7 +185,7 @@ ${miniicon} Günlük Mesaj: \`${Number(messageDaily).toLocaleString()} mesaj\`
 `)
     }
 
-    if (menu.values[0] === "ozi8") {
+    if (menu.values[0] === "aroura8") {
 menu.reply.edit(`
 ${menu.clicker.member.toString()}, üyesinin \`${moment(Date.now() + (1000*60*60*3)).format("LLL")}\` tarihinden  itibaren \`${menu.guild.name}\` sunucusunda toplam ses bilgileri aşağıda belirtilmiştir.
 ${star} **Sesli Sohbet İstatistiği**
