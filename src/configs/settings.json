@@ -1,7 +1,7 @@
 {
   "prefix": ["."],
   "guildID": "982541040118538320",
-  "mongoUrl": "mongodb+srv://Darcard:Darcard@darcard.kxpnj.mongodb.net/Darcard?retryWrites=true&w=majority",
+  "mongoUrl": "mongodb+srv://burak:ba0651@cluster0.7lprr.mongodb.net/burak?retryWrites=true&w=majority",
   "owners": ["807188813616775168","746098815173525515"],
   "botDurum": "Aroura",
   "botSes": "982890041770639361",
