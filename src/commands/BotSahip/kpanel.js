@@ -17,9 +17,9 @@ moment.locale("tr");
 
 module.exports = {
   conf: {
-    aliases: ["kontrolpanel"],
-    name: "kontrolpanel",
-    help: "kontrolpanel",
+    aliases: ["kpanel"],
+    name: "kpanel",
+    help: "kpanel",
     owner: true
   },
  
@@ -28,47 +28,47 @@ module.exports = {
  let aroura = new disbut.MessageMenuOption()
  .setLabel("Sunucuya Katılma Tarihiniz")
  .setValue("aroura")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura1 = new disbut.MessageMenuOption()
  .setLabel("Üzerinde Bulunan Rollerin Listesi")
  .setValue("aroura1")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura2 = new disbut.MessageMenuOption()
  .setLabel("Hesabınızın Açılış Tarihi")
  .setValue("aroura2")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura3 = new disbut.MessageMenuOption()
  .setLabel("Toplam invite Bilgileri")
  .setValue("aroura3")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura4 = new disbut.MessageMenuOption()
  .setLabel("Tekrar Kayıt Olma")
  .setValue("aroura4")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura5 = new disbut.MessageMenuOption()
  .setLabel("Sunucu Bilgileri")
  .setValue("aroura5")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura6 = new disbut.MessageMenuOption()
  .setLabel("İsim Bilgileri")
  .setValue("aroura6")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura7 = new disbut.MessageMenuOption()
  .setLabel("Toplam Mesaj Bilgileri")
  .setValue("aroura7")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let aroura8 = new disbut.MessageMenuOption()
  .setLabel("Toplam Ses Bilgileri")
  .setValue("aroura8")
- .setEmoji("915754675247120465")
+ .setEmoji("987441936266834010")
 
  let kpanel = new disbut.MessageMenu();
  kpanel.setID("987642871786131466");
