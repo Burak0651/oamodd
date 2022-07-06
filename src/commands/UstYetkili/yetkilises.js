@@ -6,14 +6,16 @@ module.exports = {
     help: "ysay"
   },
 
-  run: async (client, message, args, embed, durum) => {
+  run: async (client, message, args, durum) => {
     if (message.member.hasPermission('ADMINISTRATOR')) {
       let matthe = args[0];
 
-      let sesdedeğil = message.guild.members.cache.filter(x => x.roles.cache.has(conf.teyitciRolleri)).filter(y => !y.voice.channel && y.presence.status != "offline")
+      let sesdedeğil = message.guild.members.cache.filter(x => x.roles.cache.has(conf.registration.staff)).filter(y => !y.voice.channel && y.presence.status != "offline")
       message.channel.send(`
         Aktif olup seste olmayan yetkililer:
-    ${sesdedeğil.map(s => `${s} \`${s.user.tag}\``).join('\n')}`)
+${sesdedeğil.map(s => `${s} \`${s.user.tag}\``).join('\n')}
+
+Sese Girmeniz Rica Olunur.`)
     } else
       return message.channel.send(`Bu komutu kullanabilmek için öncelikle gerekli yetkin olmalı!`)
   }
