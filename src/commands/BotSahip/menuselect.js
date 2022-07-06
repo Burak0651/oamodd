@@ -163,33 +163,33 @@ module.exports = {
       diger.setMinValues(1);
       diger.addOptions(digerPush,kaldırdiger);
     
-      if (args[0] === "katılım") {
+      if (args[0] === "1") {
         message.channel.send(`:tada: Sunucuda sizleri rahatsız etmemek için \`@everyone\` veya \`@here\` atmayacağız. Sadece isteğiniz doğrultusunda aşağıda bulunan tepkilere tıklarsanız Çekilişler,Etkinlikler V/K ve D/C'den haberdar olacaksınız.
 
 \`⦁\` Eğer \`@Etkinlik Katılımcısı\` Rolünü alırsanız sunucumuzda düzenlenecek olan etkinlikler, konserler ve oyun etkinlikleri gibi etkinliklerden haberdar olabilirsiniz. 
         
 \`⦁\` Eğer \`@Çekiliş Katılımcısı\` Rolünü alırsanız sunucumuzda sıkça vereceğimiz ${ozinitro} , ${ozispotify} , ${ozinetflix} , ${oziexxen} , ${oziblutv} ve daha nice ödüllerin bulunduğu çekilişlerden haberdar olabilirsiniz. 
         
-**NOT:** \`Kayıtlı, kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Sunucumuz da everyone veya here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.\``, katılım);
+**NOT:** \`Kayıtlı, kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Sunucumuz da everyone veya here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.\``, 1);
       }
 
 
-      if (args[0] === "burc") {
-        message.channel.send(`${star} Aşağıda ki menüden **Burç** rollerinden dilediğinizi alabilirsiniz.`, burc);
+      if (args[0] === "2") {
+        message.channel.send(`${star} Aşağıda ki menüden **Burç** rollerinden dilediğinizi alabilirsiniz.`, 2);
       }
     
     
-      if (args[0] === "oyun") {
-        message.channel.send(`${star} Aşağıda ki menüden **Oyun** rollerinden dilediğinizi alabilirsiniz.`, oyun);
+      if (args[0] === "3") {
+        message.channel.send(`${star} Aşağıda ki menüden **Oyun** rollerinden dilediğinizi alabilirsiniz.`, 3);
       }
     
-      if (args[0] === "renk") {
-        message.channel.send(`${star} Aşağıda ki menüden **Renk** rollerinden dilediğinizi alabilirsiniz.`, renk);
+      if (args[0] === "4") {
+        message.channel.send(`${star} Aşağıda ki menüden **Renk** rollerinden dilediğinizi alabilirsiniz.`, 4);
       }
     
     
-      if (args[0] === "iliski") {
-        message.channel.send(`${star} Aşağıda ki menüden **İlişki** rollerinden dilediğinizi alabilirsiniz.`, diger);
+      if (args[0] === "5") {
+        message.channel.send(`${star} Aşağıda ki menüden **İlişki** rollerinden dilediğinizi alabilirsiniz.`, 5);
       }
     
   
@@ -198,7 +198,7 @@ module.exports = {
 
     client.on("clickMenu", async (menu) => {
 
-      if (menu.id == "katılım") {
+      if (menu.id == "1") {
         await menu.reply.think(true);
         await menu.reply.edit("Rollerin güncellendi!");
         let add = [];
@@ -231,7 +231,7 @@ module.exports = {
         };
 
 
-      if (menu.id == "burc") {
+      if (menu.id == "2") {
           await menu.reply.think(true);
           await menu.reply.edit("Rollerin güncellendi!");
           let add = [];
@@ -263,7 +263,7 @@ module.exports = {
           };
           };
     
-      if (menu.id == "oyun") {
+      if (menu.id == "3") {
         await menu.reply.think(true);
         await menu.reply.edit("Rollerin güncellendi!");
         let add = [];
@@ -292,7 +292,7 @@ module.exports = {
         };
       };
     
-      if (menu.id == "renk") {
+      if (menu.id == "4") {
         await menu.reply.think(true);
         if (!menu.clicker.member.roles.cache.get(conf.boosterRolu)) return await menu.reply.edit("Booster üye olman gerek!");;
         await menu.reply.edit("Rollerin güncellendi!");
@@ -325,7 +325,7 @@ module.exports = {
   
         };
       };
-      if (menu.id == "diger") {
+      if (menu.id == "5") {
         await menu.reply.think(true);
         await menu.reply.edit("Rollerin güncellendi!");
         let add = [];
