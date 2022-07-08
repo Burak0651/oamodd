@@ -5,8 +5,9 @@ const Discord = require('discord.js');
 module.exports = {
  conf: {
     aliases: ["ping","ms"],
-    name: "ping"
-   },
+    name: "ping",
+    help: "ping"
+ },
   
 run: async(client, message) => {
 
