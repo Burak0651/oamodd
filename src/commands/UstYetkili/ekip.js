@@ -35,19 +35,19 @@ let yönetici = message.mentions.members.first() || message.guild.members.cache.
 if (secim === "ekle") {
 if (!tag) 
 {
-message.channel.send(embed.setDescription(`Geçerli Bir kullanım şekli belirtmelisin. **!ekip ekle Tag - Etiket tagı - Ekip Yöneticisi** \n Örnek: !ekip ekle Shew 1404 @Ozi/Shew)`))
+message.channel.send(embed.setDescription(`Geçerli Bir kullanım şekli belirtmelisin. **.ekip ekle Tag - Etiket tagı - Ekip Yöneticisi** \n Örnek: .ekip ekle ✭ 0001 @Ozi)`))
 message.react(red)
 return
 }
 if (!sayitagi || isNaN(sayitagi)) 
 {
-message.channel.send(embed.setDescription(`Etiket tagını eklemeyi unuttun **!ekip ekle Tag - Etiket tagı - Ekip Yöneticisi** \n Örnek: !ekip ekle ${Guild.Tag} 1404 @Ozi/Shew)`)).then(x => x.delete({ timeout: 3500 }));
+message.channel.send(embed.setDescription(`Etiket tagını eklemeyi unuttun **!ekip ekle Tag - Etiket tagı - Ekip Yöneticisi** \n Örnek: .ekip ekle ${Guild.Tag} 0001 @Ozi)`)).then(x => x.delete({ timeout: 3500 }));
 message.react(red)
 return
 }
 if (!yönetici) 
 {
-message.channel.send(embed.setDescription(`Ekip Yöneticisi Eklemeyi Unuttun. **!ekip ekle Tag - Etiket tagı - Ekip Yöneticisi** \n Örnek: !ekip ekle ${Guild.Tag} 1404 @Ozi/Shew))`)).then(x => x.delete({ timeout: 3500 }));
+message.channel.send(embed.setDescription(`Ekip Yöneticisi Eklemeyi Unuttun. **!ekip ekle Tag - Etiket tagı - Ekip Yöneticisi** \n Örnek: .ekip ekle ${Guild.Tag} 0001 @Ozi))`)).then(x => x.delete({ timeout: 3500 }));
 Message.react(red)
 return
 }        

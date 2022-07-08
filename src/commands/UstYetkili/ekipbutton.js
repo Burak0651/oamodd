@@ -3,13 +3,13 @@ const disbut = require('discord-buttons')
 const conf = require("../../configs/settings.json")
 module.exports = {
     conf: {
-      aliases: ["ekip"],
-      name: "ekip",
-      help: "ekip"
+      aliases: ["ekipb"],
+      name: "ekipb",
+      help: "ekipb"
     },
  run: async (client, message, args, durum, kanal) => {
   
-let botcomamnds = "855159731176865812"
+let botcomamnds = "982541041196486689"
 let tag = "✬" 
   let ekiprol = ["982541040181465097","","","","","","","",""]
   let ekipetikettag = ["","","","","","","",""]
